@@ -1,0 +1,1064 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
+:root{
+    --green: #0d9979;
+}
+
+*{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    transition: all .2s cubic-bezier(0.37, 1.14, 0.26, 1.24);
+    text-decoration: none;
+}
+*::selection{
+    background: var(--green);
+    color: #fff;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+.btn{
+    height: 3.5rem;
+    width: 15rem;
+    background: none;
+    border: 0.2rem solid var(--green);
+    color: var(--green);
+    font-size: 2rem;
+    margin: 1rem 0;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 0;
+    position: relative;
+}
+
+.btn::before, .btn::after{
+    position: absolute;
+    content: '';
+    top: 0; left: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--green);
+    z-index: -1;
+    transition: all .2s cubic-bezier(0.37, 1.14, 0.26, 1.24);
+}
+
+.btn::before{
+    clip-path: polygon(0 0, 0 0, 0 0);
+}
+
+.btn:hover:before{
+    clip-path: polygon(0 0, 0 100%, 100% 0);
+}
+
+.btn::after{
+    clip-path: polygon(100% 100%, 100% 100%, 100% 100%);
+}
+
+.btn:hover:after{
+    clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
+}
+
+.btn:hover{
+    color: #fff;
+}
+
+.heading{
+    text-align: center;
+    font-size: 4rem;
+    color: #555;
+    padding: 1rem;
+    padding-top: 7rem;
+}
+
+.heading i{
+    color: var(--green);
+    font-size: 2rem;
+}
+
+/*header section starts*/
+/* header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    box-shadow: 0 0.1rem 0.3rem rgba(0,0,0,0.3);
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 1000;
+    padding: 1rem 5rem;
+    width: 100%;
+}
+
+header .logo{
+    color: var(--green);
+    font-size: 3rem;
+}
+
+header .navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+header .navbar ul li{
+    margin: 0 1rem;
+}
+
+header .navbar ul li a{
+    font-size: 2rem;
+    color: #3339;
+}
+
+header .navbar ul li a:hover{
+    color: var(--green);
+}
+
+header .fa-bars{
+    font-size: 3rem;
+    color: #3337;
+    cursor: pointer;
+    display: none;
+} */
+/*header section ends*/
+
+
+/*home section begins*/
+/* .home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../images/home-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content{
+    text-align: center;
+    padding: 1rem;
+}
+
+.home .content h1{
+    font-size: 7rem;
+    color: var(--green);
+}
+
+.home .content p{
+    font-size: 1.9rem;
+    color: #333;
+    padding: 1rem 0;
+    width: 70rem;
+}  */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
+:root{
+    --green: #0d9979;
+    --dark-bg: #0a0a0a;
+    --light-text: #f5f5f5;
+    --shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+*{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+*::selection{
+    background: var(--green);
+    color: #fff;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.btn{
+    height: 4rem;
+    width: 18rem;
+    background: none;
+    border: 0.3rem solid var(--green);
+    color: var(--green);
+    font-size: 2rem;
+    margin: 1.5rem 0;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 0;
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: var(--shadow);
+}
+
+.btn::before, .btn::after{
+    position: absolute;
+    content: '';
+    top: 0; left: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--green);
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn::before{
+    clip-path: polygon(0 0, 0 0, 0 0);
+}
+
+.btn:hover:before{
+    clip-path: polygon(0 0, 0 100%, 100% 0);
+}
+
+.btn::after{
+    clip-path: polygon(100% 100%, 100% 100%, 100% 100%);
+}
+
+.btn:hover:after{
+    clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
+}
+
+.btn:hover{
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.heading{
+    text-align: center;
+    font-size: 5rem;
+    color: var(--light-text);
+    padding: 2rem;
+    padding-top: 8rem;
+    text-shadow: var(--shadow);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.heading i{
+    color: var(--green);
+    font-size: 2.5rem;
+}
+
+/*header section starts*/
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--dark-bg);
+    box-shadow: var(--shadow);
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 1000;
+    padding: 1.5rem 6rem;
+    width: 100%;
+}
+
+header .logo{
+    color: var(--green);
+    font-size: 3.5rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    text-shadow: var(--shadow);
+}
+
+header .navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+header .navbar ul li{
+    margin: 0 1.5rem;
+}
+
+header .navbar ul li a{
+    font-size: 2.2rem;
+    color: var(--light-text);
+    position: relative;
+}
+
+header .navbar ul li a:hover{
+    color: var(--green);
+    text-decoration: underline;
+}
+
+header .fa-bars{
+    font-size: 3.5rem;
+    color: var(--light-text);
+
+    cursor: pointer;
+    display: none;
+}
+
+/*header section ends*/
+
+/*home section begins*/
+/* .home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../images/home-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.home .content{
+    text-align: center;
+    padding: 2rem;
+    animation: slideIn 1.5s ease-in-out;
+}
+
+.home .content h1{
+    font-size: 8rem;
+    color: var(--green);
+    text-shadow: var(--shadow);
+}
+
+.home .content p{
+    font-size: 2rem;
+    color: black;
+    padding: 1.5rem 0;
+    width: 75rem;
+    text-shadow: var(--shadow);
+} */
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start; /* Change from center to flex-start to align content to the top */
+    justify-content: center;
+    background: url(../images/home-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: fadeIn 2s ease-in-out;
+    padding-top: 15rem; 
+}
+
+.home .content {
+    text-align: center;
+    padding: 2rem;
+    animation: slideIn 1.5s ease-in-out;
+    max-width: 90%; /* Ensures text does not stretch too wide on large screens */
+}
+
+.home .content h1 {
+    font-size: 6rem; /* Reduced font size for the heading */
+    color: var(--green);
+    text-shadow: var(--shadow);
+    margin-bottom: 1rem; /* Add margin to give some space below the heading */
+}
+
+.home .content p {
+    font-size: 1.8rem; /* Slightly reduced font size */
+    color: black;
+    padding: 1.5rem 0;
+    width: 75rem;
+    text-shadow: var(--shadow);
+}
+
+/* Explore Button */
+/* .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 1.5rem; /* Space between the paragraph and button */
+}
+
+.btn:hover {
+    background-color: #45a049;
+} */
+
+
+/* Keyframes for shaking animation */
+/* Keyframes for shaking animation */
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(1deg); }
+    50% { transform: rotate(-1deg); }
+    75% { transform: rotate(1deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* General styling for all tree images */
+.tree {
+    position: absolute;
+    width: 150px;
+    animation: shake 2s infinite ease-in-out;
+}
+
+/* Specific positions for each tree */
+.tree1 {
+    top: 10%;
+    left: 7%;
+}
+
+.tree2 {
+    top: 20%;
+    right: 10%;
+}
+
+.tree3 {
+    bottom: 15%;
+    left: 20%;
+}
+
+.tree4 {
+    bottom: 10%;
+    right: 15%;
+}
+.tree:hover {
+    transform: scaleX(-1);
+}
+
+/* .tree5 {
+    top: 50%;
+    left: 20%;
+} */
+/* General styling for the flying bird */
+.flying-bird {
+    position: absolute;
+    width: 400px; /* Adjusted size */
+    height: auto; /* Maintains aspect ratio */
+    animation: fly 10s linear infinite;
+}
+/* Keyframes for the flying animation */
+@keyframes fly {
+    0% {
+        top: 10%;
+        left: 0;
+        transform: rotate(0deg);
+    }
+    25% {
+        top: 0;
+        left: 50%;
+        transform: rotate(90deg);
+    }
+    50% {
+        top: 10%;
+        left: 100%;
+        transform: rotate(180deg);
+    }
+    75% {
+        top: 50%;
+        left: 50%;
+        transform: rotate(270deg);
+    }
+    100% {
+        top: 10%;
+        left: 0;
+        transform: rotate(360deg);
+    }
+}
+
+
+
+/*home section ends*/
+
+
+/*about section begins*/
+.about .row{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.about .row .image{
+    flex: 1 1 40rem;
+    padding: 2rem;
+}
+
+.about .row .image img{
+    width: 100%;
+}
+
+.about .row .content{
+    flex: 1 1 40rem;
+    padding: 2rem;
+}
+
+.about .row .content h3{
+    font-size: 3rem;
+    color: var(--green);
+}
+
+.about .row .content p{
+    font-size: 1.5rem;
+    color: #3339;
+    padding: 1rem;
+}
+
+.about .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap
+}
+
+.about .box-container .box{
+    padding: 2rem 1rem;
+    text-align: center;
+    border: 0.2rem solid var(--green);
+    flex: 1 1 20rem;
+    margin: 2rem;
+}
+
+.about .box-container .box i{
+    color: var(--green);
+    font-size: 4rem;
+}
+
+.about .box-container .box h3{
+    color: #333;
+    font-size: 2.5rem;
+    padding: 1rem 0;
+}
+
+.about .box-container .box p{
+    color: #3339;
+    font-size: 1.7rem;
+}
+/*about section ends*/
+
+
+/*service section begins*/
+.service{
+    background: #f0f0f0;
+    min-height: 100vh;
+}
+
+.service .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.service .box-container .box{
+    flex: 1 1 25rem;
+    padding: 2rem 1rem;
+    text-align: center;
+    background: #fff;
+    border: 0.2rem solid var(--green);
+    margin: 2rem;
+    cursor: pointer;
+}
+
+.service .box-container .box i{
+    color: var(--green);
+    font-size: 4rem;
+    padding: 1rem 0;
+}
+
+.service .box-container .box h3{
+    color: #333;
+    font-size: 2rem;
+}
+
+.service .box-container .box p{
+    color: #3339;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+.service .box-container .box a{
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.service .box-container .box a:hover{
+    color: var(--green);
+    font-weight: 700;
+}
+
+.service .box-container .box:hover{
+    box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
+}
+
+/*service section ends*/
+
+
+/*project section begins*/
+.project{
+    background: #333;
+    min-height: 100vh;
+}
+
+.project .heading{
+    color: #fff;
+}
+
+.project .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.project .box-container .box{
+    flex: 1 1 30rem;
+    height: 22rem;
+    box-shadow: 0 0.3rem 0.5rem #000;
+    overflow: hidden;
+    position: relative;
+    margin: 1rem;
+}
+
+.project .box-container .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.project .box-container .box .icons{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 100%; left: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    transform: scale(0);
+}
+
+.project .box-container .box:hover .icons{
+    top: 0;
+    transform: scale(1);
+}
+
+.project .box-container .box .icons a{
+    font-size: 3rem;
+    color: #fff;
+    margin: 3rem 0;
+    text-shadow: 0 0.3rem 0.5rem #000;
+    transform: translateY(13rem);
+    transition-delay: calc(0.2s * var(--i));
+}
+
+.project .box-container .box:hover .icons a{
+    transform: translateY(0rem);
+}
+/*project section ends*/
+
+
+/*donate section begins*/
+/* .donate{
+    position: relative;
+    z-index: 0;
+    min-height: 100vh;
+    padding-bottom: 3rem;
+}
+
+.donate .heading{
+    color: #fff;
+}
+
+.donate .video-container video{
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.donate .form-container form{
+    width: 80%;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(0.4rem);
+    box-shadow: 0 0.3rem 0.5rem #000;
+    text-align: center;
+    border-top: 0.1rem solid rgba(255, 255, 255, 0.3);
+    border-left: 0.1rem solid rgba(255, 255, 255, 0.3);
+}
+
+.donate .form-container form .inputBox{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.donate .form-container form .inputBox input, select{
+    height: 4rem;
+    width: 49%;
+    background: #fff;
+    color: #333;
+    padding: 0 1rem;
+    margin: 1rem 0;
+    font-size: 1.7rem;
+    outline: none;
+    border: none;
+}
+
+.donate .form-container form textarea{
+    height: 20rem;
+    width: 100%;
+    background: #fff;
+    color: #333;
+    padding: 1rem;
+    margin: 1rem 0;
+    font-size: 1.7rem;
+    outline: none;
+    border: none;
+    resize: none;
+}
+
+.donate .form-container form input[type="submit"]{
+    color: #fff;
+    border-color: #fff;
+}
+
+.donate .form-container form input[type="submit"]:hover{
+    color: var(--green);
+    border-color: var(--green);
+    background: #fff;
+} */
+/* donate section */
+.donate {
+    position: relative;
+    z-index: 0;
+    min-height: 100vh;
+    padding-bottom: 3rem;
+}
+
+.donate .heading {
+    color: #fff;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 2rem;
+}
+
+.donate .video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.donate .form-container {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(0.4rem);
+    box-shadow: 0 0.3rem 0.5rem #000;
+    text-align: center;
+    border-top: 0.1rem solid rgba(255, 255, 255, 0.3);
+    border-left: 0.1rem solid rgba(255, 255, 255, 0.3);
+}
+
+.donate .form-container form {
+    width: 100%;
+    padding: 2rem;
+}
+
+.donate .form-container form .inputBox {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.donate .form-container form .inputBox input, 
+.donate .form-container form select {
+    height: 4rem;
+    width: 49%;
+    background: #fff;
+    color: #333;
+    padding: 0 1rem;
+    margin: 1rem 0;
+    font-size: 1.7rem;
+    outline: none;
+    border: none;
+}
+
+.donate .form-container form textarea {
+    height: 20rem;
+    width: 100%;
+    background: #fff;
+    color: #333;
+    padding: 1rem;
+    margin: 1rem 0;
+    font-size: 1.7rem;
+    outline: none;
+    border: none;
+    resize: none;
+}
+
+.donate .form-container form input[type="submit"] {
+    color: #fff;
+    border: 0.1rem solid #fff;
+    background: transparent;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.donate .form-container form input[type="submit"]:hover {
+    color: var(--green);
+    border-color: var(--green);
+    background: #fff;
+}
+
+.donate .form-container form select option {
+    color: #333;
+    font-size: 1.5rem;
+}
+
+/* Add additional styles as needed for responsiveness */
+
+/*donate section ends*/
+
+
+/*post section begins*/
+.post{
+    min-height: 100vh;
+}
+
+.post .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+
+.post .box-container .box{
+    width: 35rem;
+    box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
+    margin: 2rem 1.5rem;
+}
+
+.post .box-container .box img{
+    height: 23rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.post .box-container .box .content{
+    padding: 1rem;
+}
+
+.post .box-container .box .content span{
+    font-size: 1.5rem;
+    color: #3339;
+}
+
+.post .box-container .box .content span i{
+    padding: 1rem 0;
+    color: var(--green);
+}
+
+.post .box-container .box .content h3{
+    font-size: 2.4rem;
+    color: #333;
+}
+
+.post .box-container .box .content:hover h3{
+    text-decoration: underline;
+    color: var(--green);
+}
+
+.post .box-container .box .content p{
+    color: #3339;
+    font-size: 1.4rem;
+}
+/*post section ends*/
+
+
+/*footer section begins*/
+.footer{
+    background: #333;
+}
+
+.footer .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.footer .box-container .box{
+    margin: 2rem;
+    flex: 1 1 25rem;
+}
+
+.footer .box-container .box .logo{
+    font-size: 3rem;
+    color: var(--green);
+}
+
+.footer .box-container .box p{
+    font-size: 1.7rem;
+    color: #ccc;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box .share{
+    text-align: center;
+    font-size: 3rem;
+    color: #fff;
+}
+
+.footer .box-container .box:nth-child(2) a{
+    text-align: center;
+    font-size: 1.7rem;
+    color: #eee;
+    display: block;
+    padding: 0.5rem 0;
+}
+
+.footer .box-container .box:nth-child(2) a:hover{
+    text-decoration: underline;
+}
+
+.footer .box-container .box .letter{
+    font-size: 3rem;
+    color: #fff;
+}
+
+.footer .box-container .box form input[type="email"]{
+    padding: 0 1rem;
+    outline: none;
+    border: 0.2rem solid var(--green);
+    background: none;
+    font-size: 1.7rem;
+    color: #fff;
+    height: 4rem;
+    width: 74%;
+}
+
+.footer .box-container .box form button{
+    outline: none;
+    border: none;
+    background: var(--green);
+    font-size: 1.9rem;
+    color: #fff;
+    height: 4rem;
+    width: 25%;
+    cursor: pointer;
+}
+
+.footer .box-container .box form button:hover{
+    color: var(--green);
+    background: none;
+    border: 0.1rem solid var(--green);
+}
+
+.footer .credit{
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+    width: 85%;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    border-top: 0.1rem solid #ccc;
+}
+
+.footer .credit a{
+    color: var(--green);
+}
+
+.footer .credit a:hover{
+    text-decoration: underline;
+}
+/*footer section ends*/
+
+
+/* media queries */
+@media (max-width:768px){
+    html{
+        font-size: 55%;
+    }
+
+    header .fa-bars{
+        display: block;
+    }
+
+    header .navbar{
+        position: fixed;
+        top: -100rem; left: 0;
+        width: 100%;
+        border-top: 0.1rem solid #ccc;
+        opacity: 0;
+    }
+
+    header .navbar ul{
+        flex-flow: column;
+        padding: 2rem 0;
+        background: #fff;
+    }
+
+    header .navbar ul li{
+        width: 100%;
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+    header .navbar ul li a{
+        font-size: 3rem;
+        display: block;
+    }
+
+    .fa-times{
+        transform: rotate(180deg);
+    }
+
+    header .nav-toggle{
+        top: 6rem;
+        opacity: 1;
+    }
+
+    .home .content h1{
+        font-size: 5rem;
+    }
+
+    .home .content p{
+        width: auto;
+    }
+
+    .service .box-container{
+        width: auto;
+    }
+
+}
+
+@media (max-width:500px){
+    .donate .form-container form .inputBox input, select{
+        width: 100%;
+    }
+
+    .donate .form-container form{
+        width: 90%;
+    }
+}
