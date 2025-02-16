@@ -232,6 +232,39 @@ header .fa-bars{
         transform: rotate(360deg);
     }
 }
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start; /* Change from center to flex-start to align content to the top */
+    justify-content: center;
+    background: url(../images/home-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: fadeIn 2s ease-in-out;
+    padding-top: 15rem; 
+}
+
+.home .content {
+    text-align: center;
+    padding: 2rem;
+    animation: slideIn 1.5s ease-in-out;
+    max-width: 90%; /* Ensures text does not stretch too wide on large screens */
+}
+
+.home .content h1 {
+    font-size: 6rem; /* Reduced font size for the heading */
+    color: var(--green);
+    text-shadow: var(--shadow);
+    margin-bottom: 1rem; /* Add margin to give some space below the heading */
+}
+
+.home .content p {
+    font-size: 1.8rem; /* Slightly reduced font size */
+    color: black;
+    padding: 1.5rem 0;
+    width: 75rem;
+    text-shadow: var(--shadow);
+}
 
 /* Grid Layout for Images Below the Button */
 .image-grid {
@@ -1115,7 +1148,7 @@ header .fa-bars{
 
 
 /*footer section begins*/
-.footer{
+/* .footer{
     background: #333;
 }
 
@@ -1211,7 +1244,63 @@ header .fa-bars{
 
 .footer .credit a:hover{
     text-decoration: underline;
+} */
+
+/* Footer Styling */
+.footer {
+    background: linear-gradient(135deg, #2c786c, #3aaf9f);
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.footer-left {
+    flex: 1;
+    text-align: left;
+}
+
+.footer-right {
+    flex: 1;
+    text-align: right;
+}
+
+.footer .social-icon {
+    color: white;
+    margin: 0 10px;
+    font-size: 2rem;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.footer .social-icon:hover {
+    transform: scale(1.2);
+    color: black;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-left, .footer-right {
+        margin: 10px 0;
+    }
+}
+
 /*footer section ends*/
 
 
